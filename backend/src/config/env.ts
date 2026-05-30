@@ -11,7 +11,7 @@ const envSchema = z.object({
   JWT_REFRESH_SECRET: z.string(),
   JWT_EXPIRES_IN: z.string().default('15m'),
   JWT_REFRESH_EXPIRES_IN: z.string().default('7d'),
-  STRIPE_SECRET_KEY: z.string(),
+  STRIPE_SECRET_KEY: z.string().optional().default(''),
   STRIPE_WEBHOOK_SECRET: z.string().optional(),
   ALLOWED_ORIGINS: z.string().default('http://localhost:8081'),
   COMMISSION_RATE: z.string().default('0.15'),
